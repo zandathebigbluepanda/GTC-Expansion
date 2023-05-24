@@ -1,5 +1,10 @@
-# **_NOTICE : THIS MOD IS DEAD, AND I HAVE NO PLANS T FIX ANY ISSUES. USE AT YOUR OWN RISK._**
+This is a warning I am not a java dev, I am a web designer, I am very stupid, and this is the first time since I was 13 that I've done any MC development.
 
+All that said, this is just an update so this mod works with Vintage gregtech instead of gregtech classic.
+Please note some things are broken, but most things should be working, I've done some limited testing so let me know if you have any issues. 
+
+
+Original Readme below:
 # GTC Expansion
 # About 
 GTC Expansion is an addon to GT Classic adding various machines and such. currently it aims to make gtclassic more like gt4, but I will add other things.
