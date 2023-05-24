@@ -205,7 +205,7 @@ public class GTCXRecipeProcessing {
             GTCXTileCentrifuge.addRecipe("crushedPurified" + main.getDisplayName(), 1, GTCXTileCentrifuge.totalEu(1280), new ItemStack[]{ GTCXRecipeIterators.getDust(main, 1), outputThermalSide });
         }
         if (GTCXConfiguration.general.cauldronOreWashing){
-            GTCXRecipeLists.CAULDRON_RECIPE_LIST.addRecipe(Collections.singletonList(input("crushed" + main.getDisplayName(), 1)), new MachineOutput(null, GTCXMaterialGen.getPurifiedCrushedOre(main, 1), outputWashSide, GTMaterialGen.getDust(GTCXMaterial.Stone, 1)), GTCXMaterialGen.getCrushedOre(main, 1).getUnlocalizedName(), 0);
+            GTCXRecipeLists.CAULDRON_RECIPE_LIST.addRecipe(Collections.singletonList(input("crushed" + main.getDisplayName(), 1)), new MachineOutput(null, GTCXMaterialGen.getPurifiedCrushedOre(main, 1), outputWashSide, GTMaterialGen.getDust(GTCXMaterial.Stone, 1)), GTCXMaterialGen.getCrushedOre(main, 1).getTranslationKey(), 0);
         }
         TileEntityMacerator.addRecipe("crushed" + main.getDisplayName(), 1, GTCXRecipeIterators.getDust(main, 1));
         TileEntityMacerator.addRecipe("crushedPurified" + main.getDisplayName(), 1, GTCXRecipeIterators.getDust(main, 1));

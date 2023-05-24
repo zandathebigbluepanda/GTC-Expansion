@@ -51,7 +51,7 @@ public class GTCXItemToolCrowbar extends ItemTool implements IStaticTexturedItem
             this.setHarvestLevel("crowbar", 2);
         }
         setRegistryName(this.material.getName() + "_crowbar");
-        setUnlocalizedName(GTCExpansion.MODID + "." + this.material.getName() + "_crowbar");
+        setTranslationKey(GTCExpansion.MODID + "." + this.material.getName() + "_crowbar");
         setCreativeTab(GTMod.creativeTabGT);
     }
 

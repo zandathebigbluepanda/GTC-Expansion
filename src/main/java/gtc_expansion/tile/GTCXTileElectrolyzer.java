@@ -587,7 +587,7 @@ public class GTCXTileElectrolyzer extends GTTileBaseMachine implements ITankList
     }
 
     static void addRecipe(List<IRecipeInput> input, MachineOutput output){
-        addRecipe(input, output, (output instanceof GTFluidMachineOutput ? ((GTFluidMachineOutput)output).getFluids().get(0).getUnlocalizedName() : output.getAllOutputs().get(0).getUnlocalizedName()));
+        addRecipe(input, output, (output instanceof GTFluidMachineOutput ? ((GTFluidMachineOutput)output).getFluids().get(0).getUnlocalizedName() : output.getAllOutputs().get(0).getTranslationKey()));
     }
 
     static void addRecipe(List<IRecipeInput> input, MachineOutput output, String recipeID) {
@@ -596,7 +596,7 @@ public class GTCXTileElectrolyzer extends GTTileBaseMachine implements ITankList
                 validFluids.add(((RecipeInputFluid)in).fluid.getFluid());
             }
         }
-        GTCXRecipeLists.ELECTROLYZER_RECIPE_LIST.addRecipe(input, output, (output instanceof GTFluidMachineOutput ? ((GTFluidMachineOutput)output).getFluids().get(0).getUnlocalizedName() : output.getAllOutputs().get(0).getUnlocalizedName()), defaultEu);
+        GTCXRecipeLists.ELECTROLYZER_RECIPE_LIST.addRecipe(input, output, (output instanceof GTFluidMachineOutput ? ((GTFluidMachineOutput)output).getFluids().get(0).getUnlocalizedName() : output.getAllOutputs().get(0).getTranslationKey()), defaultEu);
     }
 
     public static void removeRecipe(String id) {

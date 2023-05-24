@@ -368,8 +368,9 @@ public abstract class GTCXTileBasePipe extends TileEntityMachine implements IGTD
         }
         for(int i = 0; i < 6; ++i) {
             if (storage.getEntries()[i].getModelState() != null && storage.getEntries()[i].getRenderState() != null){
-                map.put("Cover at facing " + EnumFacing.getFront(i) + ": " + storage.getCoverDrop(EnumFacing.getFront(i)).getDisplayName(), true);
-                storage.getCoverLogicMap().get(EnumFacing.getFront(i)).getData(map);
+                EnumFacing facing = EnumFacing.VALUES[i];
+                map.put("Cover at facing " + facing + ": " + storage.getCoverDrop(facing).getDisplayName(), true);
+                storage.getCoverLogicMap().get(facing).getData(map);
             }
         }
     }

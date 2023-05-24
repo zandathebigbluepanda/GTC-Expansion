@@ -230,7 +230,7 @@ public class GTCXTileAssemblingMachine extends GTTileBaseMachine {
     }
 
     public static void addRecipe(IRecipeInput[] inputs, RecipeModifierHelpers.IRecipeModifier[] modifiers, ItemStack... outputs){
-        addRecipe(inputs, modifiers, outputs[0].getUnlocalizedName(), outputs);
+        addRecipe(inputs, modifiers, outputs[0].getTranslationKey(), outputs);
     }
 
     public static void addRecipe(IRecipeInput[] inputs, RecipeModifierHelpers.IRecipeModifier[] modifiers, String recipeId, ItemStack... outputs) {
@@ -250,6 +250,6 @@ public class GTCXTileAssemblingMachine extends GTTileBaseMachine {
     }
 
     static void addRecipe(List<IRecipeInput> input, MachineOutput output) {
-        GTCXRecipeLists.ASSEMBLING_MACHINE_RECIPE_LIST.addRecipe(input, output, output.getAllOutputs().get(0).getUnlocalizedName(), 16);
+        GTCXRecipeLists.ASSEMBLING_MACHINE_RECIPE_LIST.addRecipe(input, output, output.getAllOutputs().get(0).getTranslationKey(), 16);
     }
 }

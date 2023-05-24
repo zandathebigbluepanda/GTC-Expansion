@@ -31,7 +31,7 @@ public class GTCXItemContainerDamageless extends Item implements IStaticTextured
         this.x = x;
         this.y = y;
         setRegistryName(this.name.toLowerCase());
-        setUnlocalizedName(GTCExpansion.MODID + "." + this.name.toLowerCase());
+        setTranslationKey(GTCExpansion.MODID + "." + this.name.toLowerCase());
         setCreativeTab(GTMod.creativeTabGT);
         this.setMaxStackSize(1);
     }

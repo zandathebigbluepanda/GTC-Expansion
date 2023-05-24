@@ -40,7 +40,7 @@ public class GTCXAlloySmelterSupport {
 
         @Override
         public void apply() {
-            GTCXTileAlloySmelter.addRecipe(input1, input2, output, GTCXTileAlloySmelter.totalEu(totalEu), output.getUnlocalizedName() + "_ct");
+            GTCXTileAlloySmelter.addRecipe(input1, input2, output, GTCXTileAlloySmelter.totalEu(totalEu), output.getTranslationKey() + "_ct");
         }
 
         @Override

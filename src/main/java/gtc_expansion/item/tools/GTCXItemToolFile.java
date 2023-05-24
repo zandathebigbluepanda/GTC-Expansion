@@ -29,7 +29,7 @@ public class GTCXItemToolFile extends Item implements IStaticTexturedItem, IGTCo
         this.setMaxDamage(tmat.getMaxUses());
         this.setNoRepair();
         setRegistryName(this.material.getName() + "_file");
-        setUnlocalizedName(GTCExpansion.MODID + "." + this.material.getName() + "_file");
+        setTranslationKey(GTCExpansion.MODID + "." + this.material.getName() + "_file");
         setCreativeTab(GTMod.creativeTabGT);
     }
 

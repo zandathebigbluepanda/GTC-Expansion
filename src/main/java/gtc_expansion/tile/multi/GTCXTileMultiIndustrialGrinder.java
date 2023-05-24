@@ -534,7 +534,7 @@ public class GTCXTileMultiIndustrialGrinder extends GTTileMultiBaseMachine imple
 
     public static void addRecipe(IRecipeInput input, FluidStack fluid, int totalEu,
                                  ItemStack... outputs) {
-        addRecipe(input, fluid, totalEu, outputs[0].getUnlocalizedName(), outputs);
+        addRecipe(input, fluid, totalEu, outputs[0].getTranslationKey(), outputs);
     }
 
     public static void addRecipe(IRecipeInput input, FluidStack fluid, int totalEu, String recipeID,
@@ -551,7 +551,7 @@ public class GTCXTileMultiIndustrialGrinder extends GTTileMultiBaseMachine imple
     }
 
     static void addRecipe(IRecipeInput[] inputs, RecipeModifierHelpers.IRecipeModifier[] modifiers, List<ItemStack> outputs) {
-        addRecipe(inputs, modifiers, outputs, outputs.get(0).getUnlocalizedName());
+        addRecipe(inputs, modifiers, outputs, outputs.get(0).getTranslationKey());
     }
 
     static void addRecipe(IRecipeInput[] inputs, RecipeModifierHelpers.IRecipeModifier[] modifiers, List<ItemStack> outputs, String recipeId) {

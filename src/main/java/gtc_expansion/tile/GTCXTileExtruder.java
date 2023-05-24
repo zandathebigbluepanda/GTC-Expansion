@@ -195,7 +195,7 @@ public class GTCXTileExtruder extends GTTileBaseMachine {
     }
 
     public static void addRecipe(IRecipeInput[] inputs, RecipeModifierHelpers.IRecipeModifier[] modifiers, ItemStack... outputs){
-        addRecipe(inputs, modifiers, outputs[0].getUnlocalizedName(), outputs);
+        addRecipe(inputs, modifiers, outputs[0].getTranslationKey(), outputs);
     }
 
     public static void addRecipe(IRecipeInput[] inputs, RecipeModifierHelpers.IRecipeModifier[] modifiers, String recipeId, ItemStack... outputs) {

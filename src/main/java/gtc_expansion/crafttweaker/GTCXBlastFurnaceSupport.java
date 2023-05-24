@@ -62,7 +62,7 @@ public class GTCXBlastFurnaceSupport {
 				CraftTweakerAPI.logError(CraftTweakerAPI.getScriptFileAndLine()+ " > "
 						+ "Required heat cannot be greater then the max heat of the ibf!!!");
 			}else {
-				GTCXTileMultiIndustrialBlastFurnace.addRecipe(input, requiredHeat, totalEu, output[0].getUnlocalizedName() + "_ct", output);
+				GTCXTileMultiIndustrialBlastFurnace.addRecipe(input, requiredHeat, totalEu, output[0].getTranslationKey() + "_ct", output);
 			}
 		}
 
@@ -93,7 +93,7 @@ public class GTCXBlastFurnaceSupport {
 				CraftTweakerAPI.logError(CraftTweakerAPI.getScriptFileAndLine() + " > "
 						+ "Tick amount must be greater then 0!!");
 			} else {
-				GTCXTileMultiPrimitiveBlastFurnace.addRecipe(input, totalTicks, output[0].getUnlocalizedName() + "_ct", output);
+				GTCXTileMultiPrimitiveBlastFurnace.addRecipe(input, totalTicks, output[0].getTranslationKey() + "_ct", output);
 			}
 		}
 

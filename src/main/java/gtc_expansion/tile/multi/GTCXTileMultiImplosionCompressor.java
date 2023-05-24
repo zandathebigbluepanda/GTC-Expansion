@@ -269,7 +269,7 @@ public class GTCXTileMultiImplosionCompressor extends GTTileMultiBaseMachine {
     }
 
     public static void addRecipe(IRecipeInput[] inputs, RecipeModifierHelpers.IRecipeModifier[] modifiers, ItemStack... outputs){
-        addRecipe(inputs, modifiers, outputs[0].getUnlocalizedName(), outputs);
+        addRecipe(inputs, modifiers, outputs[0].getTranslationKey(), outputs);
     }
 
     public static void addRecipe(IRecipeInput[] inputs, RecipeModifierHelpers.IRecipeModifier[] modifiers, String recipeID, ItemStack... outputs) {
@@ -289,7 +289,7 @@ public class GTCXTileMultiImplosionCompressor extends GTTileMultiBaseMachine {
     }
 
     static void addRecipe(List<IRecipeInput> input, MachineOutput output, String recipeID) {
-        GTCXRecipeLists.IMPLOSION_COMPRESSOR_RECIPE_LIST.addRecipe(input, output, output.getAllOutputs().get(0).getUnlocalizedName(), defaultEu);
+        GTCXRecipeLists.IMPLOSION_COMPRESSOR_RECIPE_LIST.addRecipe(input, output, output.getAllOutputs().get(0).getTranslationKey(), defaultEu);
     }
 
     /*@Override

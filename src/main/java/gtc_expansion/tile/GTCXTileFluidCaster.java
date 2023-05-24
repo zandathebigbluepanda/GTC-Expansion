@@ -610,7 +610,7 @@ public class GTCXTileFluidCaster extends GTTileBaseMachine implements ITankListe
     }
 
     private static void addRecipe(IRecipeInput[] inputs, boolean press, int totalEu, ItemStack... outputs) {
-        addRecipe(inputs, press, totalEu, outputs[0].getUnlocalizedName(), outputs);
+        addRecipe(inputs, press, totalEu, outputs[0].getTranslationKey(), outputs);
     }
 
     private static void addRecipe(IRecipeInput[] inputs, boolean press, int totalEu, String recipeId, ItemStack... outputs) {

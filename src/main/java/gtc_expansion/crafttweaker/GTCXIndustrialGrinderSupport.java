@@ -49,7 +49,7 @@ public class GTCXIndustrialGrinderSupport {
                         + "Eu amount must be greater then 0!!");
                 return;
             }
-            GTCXTileMultiIndustrialGrinder.addRecipe(input1, inputFluid, totalEu, output[0].getUnlocalizedName() + "_ct", output);
+            GTCXTileMultiIndustrialGrinder.addRecipe(input1, inputFluid, totalEu, output[0].getTranslationKey() + "_ct", output);
         }
 
         @Override

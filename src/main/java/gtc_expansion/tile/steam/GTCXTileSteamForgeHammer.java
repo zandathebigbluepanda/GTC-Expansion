@@ -128,7 +128,7 @@ public class GTCXTileSteamForgeHammer extends GTCXTileBaseSteamMachine {
     }
 
     public static void addRecipe(IRecipeInput input, int totalTime, ItemStack output){
-        addRecipe(input, totalTime(totalTime), output, output.getUnlocalizedName());
+        addRecipe(input, totalTime(totalTime), output, output.getTranslationKey());
     }
 
     public static void addRecipe(IRecipeInput input, RecipeModifierHelpers.IRecipeModifier[] modifiers, ItemStack output, String recipeId){

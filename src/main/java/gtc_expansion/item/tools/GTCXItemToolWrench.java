@@ -41,7 +41,7 @@ public class GTCXItemToolWrench extends ItemToolWrench implements IGTColorItem, 
         this.material = mat;
         this.setMaxDamage(tmat.getMaxUses());
         setRegistryName(this.material.getName() + "_wrench");
-        setUnlocalizedName(GTCExpansion.MODID + "." + this.material.getName() + "_wrench");
+        setTranslationKey(GTCExpansion.MODID + "." + this.material.getName() + "_wrench");
         setCreativeTab(GTMod.creativeTabGT);
         this.setHarvestLevel("wrench", tmat.getHarvestLevel());
         this.efficiency = tmat.getEfficiency();

@@ -81,6 +81,6 @@ public class GTCXTileSteamFurnace extends GTCXTileBaseSteamMachine {
     static void addRecipe(IRecipeInput input, MachineOutput output) {
         List<IRecipeInput> inputs = new ArrayList<>();
         inputs.add(input);
-        GTCXRecipeLists.FURNACE_RECIPE_LIST.addRecipe(inputs, output, output.getAllOutputs().get(0).getUnlocalizedName(), 4);
+        GTCXRecipeLists.FURNACE_RECIPE_LIST.addRecipe(inputs, output, output.getAllOutputs().get(0).getTranslationKey(), 4);
     }
 }

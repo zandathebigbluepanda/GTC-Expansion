@@ -23,7 +23,7 @@ compileJava {
 minecraft {
     version = "${mc_version}-${forge_version}"
     runDir = "run"
-    
+
     // the mappings can be changed at any time, and must be in the following format.
     // snapshot_YYYYMMDD   snapshot are built nightly.
     // stable_#            stables are built at the discretion of the MCP team.
@@ -39,7 +39,7 @@ minecraft {
 repositories{
     maven { // JEI
         name 'DVS1 Maven FS'
-        url 'http://dvs1.progwml6.com/files/maven/'
+        url 'https://modmaven.k-4u.nl'
     }
     maven { // The One Probe
         name 'tterrag'
@@ -91,13 +91,13 @@ dependencies {
         transitive = false
     }
     compile "curse.maven:baubles-227083:2518667"
-    compile "curse.maven:ic2_classic-242942:3093608"
-    compile "curse.maven:gtclassic-324021:3059975"
-    compileOnly "curse.maven:railcraft-51195:2687757"
-    compileOnly "curse.maven:better_pipes-402834:3050661"
+    compile "curse.maven:ic2_classic-242942:4476676"
+    compile files('libs/VintageGT-1.2-deobf.jar')
+    compileOnly "curse.maven:railcraft-51195:3853491"
+    compileOnly "curse.maven:better_pipes-402834:3081338"
     compileOnly "curse.maven:twilight_forest-227639:3051450"
-    runtime "curse.maven:railcraft-51195:2687757"
-    runtime "curse.maven:better_pipes-402834:3050661"
+    runtime "curse.maven:railcraft-51195:3853491"
+    runtime "curse.maven:better_pipes-402834:3081338"
     deobfProvided ("cofh:CoFHCore:${mc_version}-${cofhcore_version}:universal") {
         exclude group: 'mezz.jei'
     }

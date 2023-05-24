@@ -162,7 +162,7 @@ public class GTCXTileMultiVacuumFreezer extends GTTileMultiBaseMachine {
     }
 
     public static void addRecipe(IRecipeInput input, RecipeModifierHelpers.IRecipeModifier[] modifiers, ItemStack output){
-        addRecipe(input, modifiers, output, output.getUnlocalizedName());
+        addRecipe(input, modifiers, output, output.getTranslationKey());
     }
 
     public static void addRecipe(IRecipeInput input, RecipeModifierHelpers.IRecipeModifier[] modifiers, ItemStack output, String recipeId){

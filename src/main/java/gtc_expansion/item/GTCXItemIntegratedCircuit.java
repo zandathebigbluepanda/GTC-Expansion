@@ -31,7 +31,7 @@ public class GTCXItemIntegratedCircuit extends Item implements IStaticTexturedIt
         this.setHasSubtypes(true);
         this.setMaxDamage(0);
         this.setRegistryName("integrated_circuit");
-        this.setUnlocalizedName(GTCExpansion.MODID + ".integrated_circuit");
+        this.setTranslationKey(GTCExpansion.MODID + ".integrated_circuit");
         this.setCreativeTab(GTMod.creativeTabGT);
     }
 

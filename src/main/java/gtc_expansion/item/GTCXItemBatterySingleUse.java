@@ -48,7 +48,7 @@ public class GTCXItemBatterySingleUse extends ItemIC2 implements ITexturedItem, 
     int id;
     public GTCXItemBatterySingleUse(String name, int maxCharge, int tier, int id) {
         this.setRegistryName(name + "_battery");
-        this.setUnlocalizedName(GTCExpansion.MODID + "." + name + "_battery");
+        this.setTranslationKey(GTCExpansion.MODID + "." + name + "_battery");
         this.locations = new ModelResourceLocation[5];
         this.maxCharge = maxCharge;
         this.tier = tier;
@@ -162,8 +162,8 @@ public class GTCXItemBatterySingleUse extends ItemIC2 implements ITexturedItem, 
     public ModelResourceLocation createResourceLocationForStack(ItemStack stack) {
         int damage = stack.getItemDamage();
         ResourceLocation location = this.getRegistryName();
-        String name = stack.getUnlocalizedName();
-        this.locations[damage] = new ModelResourceLocation(location.getResourceDomain() + name.substring(name.indexOf(".") + 1) + damage, "inventory");
+        String name = stack.getTranslationKey();
+        this.locations[damage] = new ModelResourceLocation(location.getNamespace() + name.substring(name.indexOf(".") + 1) + damage, "inventory");
         return this.locations[damage];
     }
 

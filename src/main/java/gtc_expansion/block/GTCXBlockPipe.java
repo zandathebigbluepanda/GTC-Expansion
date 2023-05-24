@@ -62,7 +62,7 @@ public class GTCXBlockPipe extends GTBlockBaseConnect implements IGTCoverBlock, 
     boolean item;
     public GTCXBlockPipe(GTMaterial material, GTCXHelperPipe.GTPipeModel type){
         super(PIPE);
-        setUnlocalizedName(GTCExpansion.MODID + "." + type.getSuffix() + material.getName() + "_pipe");
+        setTranslationKey(GTCExpansion.MODID + "." + type.getSuffix() + material.getName() + "_pipe");
         setRegistryName(type.getSuffix() + material.getName() + "_pipe");
         this.setHardness(2.0F);
         this.setSoundType(SoundType.METAL);

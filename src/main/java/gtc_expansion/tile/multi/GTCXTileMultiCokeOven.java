@@ -352,7 +352,7 @@ public class GTCXTileMultiCokeOven extends GTTileBasePassiveMachine implements I
     }
 
     public static void addRecipe(IRecipeInput[] inputs, int totalTime,  ItemStack... outputs) {
-        addRecipe(inputs, totalTime, outputs[0].getUnlocalizedName(), outputs);
+        addRecipe(inputs, totalTime, outputs[0].getTranslationKey(), outputs);
     }
 
     public static void addRecipe(IRecipeInput[] inputs, int totalTime, String recipeId, ItemStack... outputs) {
@@ -367,7 +367,7 @@ public class GTCXTileMultiCokeOven extends GTTileBasePassiveMachine implements I
     }
 
     public static void addRecipe(IRecipeInput[] inputs, int totalTime, FluidStack fluidOutput,  ItemStack... outputs) {
-        addRecipe(inputs, totalTime, outputs[0].getUnlocalizedName(), fluidOutput, outputs);
+        addRecipe(inputs, totalTime, outputs[0].getTranslationKey(), fluidOutput, outputs);
     }
 
     public static void addRecipe(IRecipeInput[] inputs, int totalTime, String recipeId, FluidStack fluidOutput, ItemStack... outputs) {

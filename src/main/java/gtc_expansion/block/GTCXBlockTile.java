@@ -126,15 +126,15 @@ public class GTCXBlockTile extends GTBlockBaseMachine implements IGTReaderInfoBl
         }
         if (this == GTCXBlocks.thermalBoiler || this == GTCXBlocks.largeGasTurbine || this == GTCXBlocks.largeSteamTurbine || this == GTCXBlocks.fusionComputer){
             if (GuiScreen.isShiftKeyDown()){
-                tooltip.add(I18n.format(this.getUnlocalizedName().replace("tile", "tooltip") + "multiblock0"));
-                tooltip.add(I18n.format(this.getUnlocalizedName().replace("tile", "tooltip") + "multiblock1"));
-                tooltip.add(I18n.format(this.getUnlocalizedName().replace("tile", "tooltip") + "multiblock2"));
-                tooltip.add(I18n.format(this.getUnlocalizedName().replace("tile", "tooltip") + "multiblock3"));
+                tooltip.add(I18n.format(this.getTranslationKey().replace("tile", "tooltip") + "multiblock0"));
+                tooltip.add(I18n.format(this.getTranslationKey().replace("tile", "tooltip") + "multiblock1"));
+                tooltip.add(I18n.format(this.getTranslationKey().replace("tile", "tooltip") + "multiblock2"));
+                tooltip.add(I18n.format(this.getTranslationKey().replace("tile", "tooltip") + "multiblock3"));
                 if (this != GTCXBlocks.thermalBoiler){
-                    tooltip.add(I18n.format(this.getUnlocalizedName().replace("tile", "tooltip") + "multiblock4"));
+                    tooltip.add(I18n.format(this.getTranslationKey().replace("tile", "tooltip") + "multiblock4"));
                 }
                 if (this == GTCXBlocks.fusionComputer){
-                    tooltip.add(I18n.format(this.getUnlocalizedName().replace("tile", "tooltip") + "multiblock5"));
+                    tooltip.add(I18n.format(this.getTranslationKey().replace("tile", "tooltip") + "multiblock5"));
                 }
             } else {
                 tooltip.add(GTCXLang.PRESS_SHIFT.getLocalized());

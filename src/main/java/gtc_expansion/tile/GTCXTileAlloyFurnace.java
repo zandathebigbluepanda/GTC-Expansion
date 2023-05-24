@@ -211,4 +211,63 @@ public class GTCXTileAlloyFurnace extends GTTileBaseFuelMachine implements IGTIt
             }
         }
     }
+
+    /**
+     * Like the old updateEntity(), except more generic.
+     */
+    @Override
+    public void update() {
+        handleRedstone();
+        boolean noRoom = addToInventory();
+        if (shouldCheckRecipe) {
+            lastRecipe = getRecipe();
+            shouldCheckRecipe = false;
+        }
+        boolean canWork = this.canWork() && !noRoom;
+        boolean operate = (canWork && lastRecipe != null && lastRecipe != GTRecipeMultiInputList.INVALID_RECIPE);
+        if (operate) {
+            handleFuelSlot();
+        }
+        if (operate && fuel >= fuelConsume) {
+            if (!getActive()) {
+                getNetwork().initiateTileEntityEvent(this, 0, false);
+            }
+            setActive(true);
+            progress += 1;
+            this.fuel -= fuelConsume;
+            if (this.fuel < 0) {
+                this.fuel = 0;
+            }
+            if (progress >= recipeOperation) {
+                process(lastRecipe);
+                progress = 0;
+            }
+            getNetwork().updateTileGuiField(this, "progress");
+            getNetwork().updateTileGuiField(this, "fuel");
+        } else {
+            if (isBurning()) {
+                --this.fuel;
+                this.getNetwork().updateTileGuiField(this, "fuel");
+            }
+            if (getActive()) {
+                if (progress != 0) {
+                    getNetwork().initiateTileEntityEvent(this, 1, false);
+                } else {
+                    getNetwork().initiateTileEntityEvent(this, 2, false);
+                }
+            }
+            if (progress != 0) {
+                progress = 0;
+                getNetwork().updateTileGuiField(this, "progress");
+            }
+            if (this.fuel <= 0) {
+                this.fuel = 0;
+            }
+            if (this.getActive() != this.isBurning()) {
+                this.setActive(this.isBurning());
+            }
+        }
+        updateComparators();
+    }
+
 }

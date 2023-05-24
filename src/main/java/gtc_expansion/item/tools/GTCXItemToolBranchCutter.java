@@ -44,7 +44,7 @@ public class GTCXItemToolBranchCutter extends ItemTool implements IStaticTexture
             this.setHarvestLevel("grafter", 3);
         }
         setRegistryName(this.material.getName() + "_branch_cutter");
-        setUnlocalizedName(GTCExpansion.MODID + "." + this.material.getName() + "_branch_cutter");
+        setTranslationKey(GTCExpansion.MODID + "." + this.material.getName() + "_branch_cutter");
         setCreativeTab(GTMod.creativeTabGT);
     }
 

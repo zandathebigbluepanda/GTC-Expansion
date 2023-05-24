@@ -39,7 +39,7 @@ public class GTCXBlockOre extends GTBlockBaseOre {
         this.id = id;
         this.texture = tex;
         setRegistryName(this.name + "_ore");
-        setUnlocalizedName(GTCExpansion.MODID + ".ore" + this.name);
+        setTranslationKey(GTCExpansion.MODID + ".ore" + this.name);
         setCreativeTab(GTMod.creativeTabGT);
         setHardness(hardness);
         setResistance(10.0F);
@@ -53,7 +53,7 @@ public class GTCXBlockOre extends GTBlockBaseOre {
 
     @Override
     public void addInformation(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-        tooltip.add(I18n.format(this.getUnlocalizedName().replace("tile", "tooltip")));
+        tooltip.add(I18n.format(this.getTranslationKey().replace("tile", "tooltip")));
     }
 
     @Override

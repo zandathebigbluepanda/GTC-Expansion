@@ -5,6 +5,7 @@ import gtc_expansion.tile.steam.GTCXTileCoalBoiler;
 import gtclassic.common.util.GTIFilters;
 import ic2.core.block.base.util.info.FuelMachineInfo;
 import ic2.core.inventory.base.IHasGui;
+import ic2.core.inventory.base.IHasInventory;
 import ic2.core.inventory.container.ContainerTileComponent;
 import ic2.core.inventory.filters.CommonFilters;
 import ic2.core.inventory.gui.GuiIC2;
@@ -13,10 +14,13 @@ import ic2.core.inventory.slots.SlotCustom;
 import ic2.core.inventory.slots.SlotOutput;
 import ic2.core.util.math.Box2D;
 import ic2.core.util.math.Vec2i;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
 
-public class GTCXContainerCoalBoiler extends ContainerTileComponent<GTCXTileCoalBoiler> {
+
+public class GTCXContainerCoalBoiler extends ContainerTileComponent<GTCXTileCoalBoiler>  {
     public GTCXContainerCoalBoiler(InventoryPlayer player, GTCXTileCoalBoiler tile) {
         super(tile);
         this.addSlotToContainer(new SlotCustom(tile, 0, 44, 26, new GTIFilters.FluidItemFilter()));
@@ -36,6 +40,11 @@ public class GTCXContainerCoalBoiler extends ContainerTileComponent<GTCXTileCoal
     @Override
     public ResourceLocation getTexture() {
         return this.getGuiHolder().getGuiTexture();
+    }
+
+    @Override
+    public boolean canInteractWith(EntityPlayer entityPlayer) {
+        return this.getGuiHolder() != null;
     }
 
     @Override

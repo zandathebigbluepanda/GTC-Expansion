@@ -70,7 +70,7 @@ public class GTCXCentrifugeSupport {
         @Override
         public void apply() {
             if (totalEu > 0) {
-                String recipeId = fluidOutput.length == 0 ? output[0].getUnlocalizedName() : fluidOutput[0].getUnlocalizedName();
+                String recipeId = fluidOutput.length == 0 ? output[0].getTranslationKey() : fluidOutput[0].getUnlocalizedName();
                 GTCXTileCentrifuge.addRecipe(input, GTCXTileCentrifuge.totalEu(totalEu), output, fluidOutput, recipeId + "_ct");
             } else {
                 CraftTweakerAPI.logError(CraftTweakerAPI.getScriptFileAndLine() + " > "

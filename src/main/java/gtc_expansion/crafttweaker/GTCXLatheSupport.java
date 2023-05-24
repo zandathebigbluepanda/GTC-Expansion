@@ -44,7 +44,7 @@ public class GTCXLatheSupport {
                         + "Eu amount must be greater then 0!!");
                 return;
             }
-            GTCXTileLathe.addRecipe(input1, totalEu, output, output.getUnlocalizedName() + "_ct");
+            GTCXTileLathe.addRecipe(input1, totalEu, output, output.getTranslationKey() + "_ct");
         }
 
         @Override

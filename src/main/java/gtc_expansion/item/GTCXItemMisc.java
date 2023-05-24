@@ -34,7 +34,7 @@ public class GTCXItemMisc extends Item implements IStaticTexturedItem {
         this.x = x;
         this.y = y;
         setRegistryName(this.name.toLowerCase());
-        setUnlocalizedName(GTCExpansion.MODID + "." + this.name.toLowerCase());
+        setTranslationKey(GTCExpansion.MODID + "." + this.name.toLowerCase());
         setCreativeTab(GTMod.creativeTabGT);
     }
 

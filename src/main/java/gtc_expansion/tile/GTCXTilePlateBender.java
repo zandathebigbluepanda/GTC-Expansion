@@ -163,7 +163,7 @@ public class GTCXTilePlateBender extends GTTileBaseMachine {
     }
 
     public static void addRecipe(IRecipeInput input, int totalEu, ItemStack output) {
-        addRecipe(new IRecipeInput[]{input}, totalEu(totalEu), output.getUnlocalizedName(), output);
+        addRecipe(new IRecipeInput[]{input}, totalEu(totalEu), output.getTranslationKey(), output);
     }
 
     public static void addRecipe(IRecipeInput input, int totalEu, ItemStack output, String recipeId) {

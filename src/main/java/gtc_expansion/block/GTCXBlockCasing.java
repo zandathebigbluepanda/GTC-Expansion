@@ -93,7 +93,6 @@ public class GTCXBlockCasing extends GTBlockBaseMachine implements ICustomModele
     }
 
     @SideOnly(Side.CLIENT)
-    @Override
     public BlockRenderLayer getBlockLayer() {
         return this == GTCXBlocks.pureGlass ? BlockRenderLayer.CUTOUT : BlockRenderLayer.CUTOUT_MIPPED;
     }

@@ -34,7 +34,7 @@ public class GTCXItemToolPickaxe extends ItemPickaxe
         this.material = mat;
         this.setHarvestLevel("pickaxe", tmat.getHarvestLevel());
         setRegistryName(this.material.getName() + "_pickaxe");
-        setUnlocalizedName(GTCExpansion.MODID + "." + this.material.getName() + "_pickaxe");
+        setTranslationKey(GTCExpansion.MODID + "." + this.material.getName() + "_pickaxe");
         setCreativeTab(GTMod.creativeTabGT);
     }
 

@@ -371,7 +371,7 @@ public class GTCXWrenchUtils {
     }
 
     public static RayTraceResult getBlockLookingAtIgnoreBB(EntityPlayer liv) {
-        Vec3d pos2 = liv.getPositionVector().addVector(0, liv.getEyeHeight(), 0);
+        Vec3d pos2 = liv.getPositionVector().add(0, liv.getEyeHeight(), 0);
         RayTraceResult rayTraceResult = rayTraceIgnoreBB(pos2, pos2.add(liv.getLookVec().scale(12)), false, true, true, liv.world, new BlockPos(0, -1, 0));
         if (rayTraceResult != null) {
             if (rayTraceResult.typeOfHit != null) {
@@ -384,7 +384,7 @@ public class GTCXWrenchUtils {
     }
 
     public static RayTraceResult getBlockLookingat1(EntityPlayer liv, BlockPos exclude) {
-        Vec3d pos2 = liv.getPositionVector().addVector(0, liv.getEyeHeight(), 0);
+        Vec3d pos2 = liv.getPositionVector().add(0, liv.getEyeHeight(), 0);
         RayTraceResult rayTraceResult = liv.world.rayTraceBlocks(pos2, pos2.add(liv.getLookVec().scale(12)), false, true, true);
         if (rayTraceResult != null) {
             if (rayTraceResult.typeOfHit != null) {
@@ -397,7 +397,7 @@ public class GTCXWrenchUtils {
     }
 
     public static RayTraceResult getBlockLookingat2(EntityPlayer liv, BlockPos exclude) {
-        Vec3d pos2 = liv.getPositionVector().addVector(0, liv.getEyeHeight(), 0);
+        Vec3d pos2 = liv.getPositionVector().add(0, liv.getEyeHeight(), 0);
         RayTraceResult rayTraceResult = rayTraceBlocks(pos2, pos2.add(liv.getLookVec().scale(12)), false, true, true, liv.world, exclude);
         if (rayTraceResult != null) {
             if (rayTraceResult.typeOfHit != null) {
@@ -412,7 +412,7 @@ public class GTCXWrenchUtils {
     public static Vec3d posToVec(BlockPos pos) {return new Vec3d(pos.getX(), pos.getY(), pos.getZ());}
 
     public static Vec3d getVecHitFromPos(BlockPos pos, EnumFacing direction) {
-        return ((posToVec(pos.offset(direction, 1)).subtract(posToVec(pos))).scale(0.3)).add((posToVec(pos)).addVector(0.5, 0.5, 0.5));
+        return ((posToVec(pos.offset(direction, 1)).subtract(posToVec(pos))).scale(0.3)).add((posToVec(pos)).add(0.5, 0.5, 0.5));
     }
 
     @Nullable
@@ -421,7 +421,7 @@ public class GTCXWrenchUtils {
         Vec3d vec3d = start.subtract(pos.getX(), pos.getY(), pos.getZ());
         Vec3d vec3d1 = end.subtract(pos.getX(), pos.getY(), pos.getZ());
         RayTraceResult raytraceresult = boundingBox.calculateIntercept(vec3d, vec3d1);
-        return raytraceresult == null ? null : new RayTraceResult(raytraceresult.hitVec.addVector(pos.getX(), pos.getY(), pos.getZ()), raytraceresult.sideHit, pos);
+        return raytraceresult == null ? null : new RayTraceResult(raytraceresult.hitVec.add(pos.getX(), pos.getY(), pos.getZ()), raytraceresult.sideHit, pos);
     }
 
     public static EnumFacing getDirection(EnumFacing overlaySide, Vec3d vec) {

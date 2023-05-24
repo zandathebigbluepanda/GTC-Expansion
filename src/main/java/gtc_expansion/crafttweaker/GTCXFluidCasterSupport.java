@@ -50,7 +50,7 @@ public class GTCXFluidCasterSupport {
                         + "Eu amount must be greater then 0!!");
                 return;
             }
-            GTCXTileFluidCaster.addRecipe(input1, inputFluid, consumePress, totalEu, output.getUnlocalizedName() + "_ct", output);
+            GTCXTileFluidCaster.addRecipe(input1, inputFluid, consumePress, totalEu, output.getTranslationKey() + "_ct", output);
         }
 
         @Override

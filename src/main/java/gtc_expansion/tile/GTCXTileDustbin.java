@@ -302,7 +302,7 @@ public class GTCXTileDustbin extends GTTileBaseRecolorableTile implements IHasGu
     }
 
     public static void addTinyDustRecipe(String name, ItemStack output){
-        addTinyDustRecipe(name, output, output.getUnlocalizedName());
+        addTinyDustRecipe(name, output, output.getTranslationKey());
     }
 
     public static void addSmallDustRecipe(String name, GTMaterial output){
@@ -314,7 +314,7 @@ public class GTCXTileDustbin extends GTTileBaseRecolorableTile implements IHasGu
     }
 
     public static void addSmallDustRecipe(String name, ItemStack output){
-        addSmallDustRecipe(name, output, output.getUnlocalizedName());
+        addSmallDustRecipe(name, output, output.getTranslationKey());
     }
 
     private static void addRecipe(String input1, int amount1, ItemStack output, String recipeId) {

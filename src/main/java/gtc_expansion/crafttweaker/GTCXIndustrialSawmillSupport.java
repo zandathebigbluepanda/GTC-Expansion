@@ -49,7 +49,7 @@ public class GTCXIndustrialSawmillSupport {
                         + "Eu amount must be greater then 0!!");
                 return;
             }
-            GTCXTileMultiIndustrialSawmill.addRecipe(input1, inputFluid, totalEu, output[0].getUnlocalizedName() + "_ct", output);
+            GTCXTileMultiIndustrialSawmill.addRecipe(input1, inputFluid, totalEu, output[0].getTranslationKey() + "_ct", output);
         }
 
         @Override

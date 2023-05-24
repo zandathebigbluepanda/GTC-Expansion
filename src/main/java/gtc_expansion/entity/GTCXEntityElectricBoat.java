@@ -51,7 +51,6 @@ public class GTCXEntityElectricBoat extends EntityElectricBoat {
 
     @Override
     protected void entityInit() {
-        super.entityInit();
         for (DataParameter<Boolean> dataparameter : DATA_ID_PADDLE) {
             this.dataManager.register(dataparameter, Boolean.FALSE);
         }

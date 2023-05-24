@@ -40,7 +40,7 @@ public class GTCXExtruderSupport {
 
         @Override
         public void apply() {
-            GTCXTileExtruder.addRecipe(input1, input2, totalEu, output, output.getUnlocalizedName() + "_ct");
+            GTCXTileExtruder.addRecipe(input1, input2, totalEu, output, output.getTranslationKey() + "_ct");
         }
 
         @Override

@@ -340,8 +340,9 @@ public abstract class GTCXTileColoredCable extends TileEntityBlock implements IE
     @Override
     public List<ItemStack> getInventoryDrops() {
         List<ItemStack> list = new ArrayList<>();
-        for(int i = 0; i < 6; ++i) {
-            if (this.anchors.contains(EnumFacing.getFront(i))) {
+        for (EnumFacing facing : EnumFacing.VALUES) {
+            EnumFacing opposite = facing.getOpposite();
+            if (opposite.getAxis().isHorizontal() && this.anchors.contains(opposite)) {
                 list.add(Ic2Items.miningPipe.copy());
             }
         }

@@ -21,7 +21,7 @@ public class GTCXItemBatteryReusable extends ItemBatteryBase {
         super(0);
         this.setRightClick();
         this.setRegistryName(name + "_battery");
-        this.setUnlocalizedName(GTCExpansion.MODID + "." + name + "_battery");
+        this.setTranslationKey(GTCExpansion.MODID + "." + name + "_battery");
         this.maxCharge = maxCharge;
         this.transferLimit = transferLimit;
         this.tier = tier;

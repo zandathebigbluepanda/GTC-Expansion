@@ -60,7 +60,7 @@ public class GTCXItemDiamondChainsaw extends ItemElectricTool
         this.efficiency = 18.0F;
         this.setHarvestLevel("axe", 3);
         this.setRegistryName("diamond_chainsaw");
-        this.setUnlocalizedName(GTCExpansion.MODID + "." + "diamond_chainsaw");
+        this.setTranslationKey(GTCExpansion.MODID + "." + "diamond_chainsaw");
         this.setCreativeTab(GTMod.creativeTabGT);
     }
 

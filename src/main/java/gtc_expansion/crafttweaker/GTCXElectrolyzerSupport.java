@@ -58,7 +58,7 @@ public class GTCXElectrolyzerSupport {
         @Override
         public void apply() {
             if (totalEu > 0) {
-                String recipeId = fluidOutput.length == 0 ? output[0].getUnlocalizedName() : fluidOutput[0].getUnlocalizedName();
+                String recipeId = fluidOutput.length == 0 ? output[0].getTranslationKey() : fluidOutput[0].getUnlocalizedName();
                 GTCXTileElectrolyzer.addRecipe(input, GTCXTileElectrolyzer.totalEu(totalEu), output, fluidOutput, recipeId + "_ct");
             } else {
                 CraftTweakerAPI.logError(CraftTweakerAPI.getScriptFileAndLine() + " > "

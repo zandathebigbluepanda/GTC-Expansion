@@ -181,7 +181,7 @@ public class GTCXTileMultiPrimitiveBlastFurnace extends GTTileBaseFuelMachine im
     }
 
     public static void addRecipe(IRecipeInput[] inputs, int totalTime,  ItemStack... outputs) {
-        addRecipe(inputs, totalTime, outputs[0].getUnlocalizedName(), outputs);
+        addRecipe(inputs, totalTime, outputs[0].getTranslationKey(), outputs);
     }
 
     public static void addRecipe(IRecipeInput[] inputs, int totalTime, String recipeId, ItemStack... outputs) {

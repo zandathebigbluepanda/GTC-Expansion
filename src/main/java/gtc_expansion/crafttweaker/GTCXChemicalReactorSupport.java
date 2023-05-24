@@ -60,7 +60,7 @@ public class GTCXChemicalReactorSupport {
                 if (fluidOutput != null){
                     GTCXTileChemicalReactor.addRecipe(inputs, GTCXTileChemicalReactor.totalEu(totalEu), fluidOutput, fluidOutput.getUnlocalizedName() + "_ct", output);
                 } else {
-                    GTCXTileChemicalReactor.addRecipe(inputs, GTCXTileChemicalReactor.totalEu(totalEu), output[0].getUnlocalizedName() + "_ct", output);
+                    GTCXTileChemicalReactor.addRecipe(inputs, GTCXTileChemicalReactor.totalEu(totalEu), output[0].getTranslationKey() + "_ct", output);
                 }
             } else {
                 CraftTweakerAPI.logError(CraftTweakerAPI.getScriptFileAndLine() + " > "

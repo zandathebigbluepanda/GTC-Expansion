@@ -53,7 +53,7 @@ public class GTCXFusionSupport {
         @Override
         public void apply() {
             if (totalEu > 0) {
-                GTCXTileMultiFusionReactor.addRecipe(input1, input2, GTTileMultiFusionReactor.totalEu(totalEu), startEu, output, output.getUnlocalizedName()+ "_ct");
+                GTCXTileMultiFusionReactor.addRecipe(input1, input2, GTTileMultiFusionReactor.totalEu(totalEu), startEu, output, output.getTranslationKey()+ "_ct");
             } else {
                 CraftTweakerAPI.logError(CraftTweakerAPI.getScriptFileAndLine() + " > "
                         + "Eu amount must be greater then 0!!");

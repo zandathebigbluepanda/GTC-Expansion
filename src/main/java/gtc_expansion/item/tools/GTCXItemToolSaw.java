@@ -27,7 +27,7 @@ public class GTCXItemToolSaw extends Item implements IStaticTexturedItem, IGTCol
         this.setMaxDamage(tmat.getMaxUses());
         this.setNoRepair();
         setRegistryName(this.material.getName() + "_saw");
-        setUnlocalizedName(GTCExpansion.MODID + "." + this.material.getName() + "_saw");
+        setTranslationKey(GTCExpansion.MODID + "." + this.material.getName() + "_saw");
         setCreativeTab(GTMod.creativeTabGT);
     }
 

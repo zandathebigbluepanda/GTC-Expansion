@@ -143,7 +143,7 @@ public class GTCXTileScanner extends TileEntityCropAnalyzer {
         if (this.inventory.get(2).isEmpty()) {
             ItemStack stack = this.inventory.get(1);
             if (stack.getItem() instanceof ICropSeed) {
-                super.update();
+                super.func_73660_a();
                 return;
             }
 

@@ -34,7 +34,7 @@ public class GTCXItemFood extends ItemFood implements IStaticTexturedItem {
         this.x = x;
         this.y = y;
         setRegistryName(name.toLowerCase());
-        setUnlocalizedName(GTCExpansion.MODID + "." + name.toLowerCase());
+        setTranslationKey(GTCExpansion.MODID + "." + name.toLowerCase());
         setCreativeTab(GTMod.creativeTabGT);
     }
 

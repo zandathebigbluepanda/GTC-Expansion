@@ -44,7 +44,7 @@ public class GTCXVacuumFreezerSupport {
                         + "Eu amount must be greater then 0!!");
                 return;
             }
-            GTCXTileMultiVacuumFreezer.addRecipe(input1, GTCXTileMultiVacuumFreezer.totalEu(totalEu), output, output.getUnlocalizedName() + "_ct");
+            GTCXTileMultiVacuumFreezer.addRecipe(input1, GTCXTileMultiVacuumFreezer.totalEu(totalEu), output, output.getTranslationKey() + "_ct");
         }
 
         @Override

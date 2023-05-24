@@ -40,14 +40,14 @@ public class GTCXItemSteelJackHammer extends ItemElectricTool implements IMining
         this.maxCharge = 10000;
         this.transferLimit = 100;
         this.setRegistryName("steel_jackhammer");
-        this.setUnlocalizedName(GTCExpansion.MODID + "." + "steel_jackhammer");
+        this.setTranslationKey(GTCExpansion.MODID + "." + "steel_jackhammer");
         this.setCreativeTab(GTMod.creativeTabGT);
     }
 
     @Override
     public void addInformation(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-        tooltip.add(I18n.format(this.getUnlocalizedName().replace("item", "tooltip")));
-        tooltip.add(I18n.format(this.getUnlocalizedName().replace("item", "tooltip") + 1));
+        tooltip.add(I18n.format(this.getTranslationKey().replace("item", "tooltip")));
+        tooltip.add(I18n.format(this.getTranslationKey().replace("item", "tooltip") + 1));
     }
 
     @Override

@@ -22,7 +22,7 @@ public class GTCXItemMiscSpriteless extends Item {
     public GTCXItemMiscSpriteless(String name) {
         this.name = name;
         setRegistryName(this.name.toLowerCase());
-        setUnlocalizedName(GTCExpansion.MODID + "." + this.name.toLowerCase());
+        setTranslationKey(GTCExpansion.MODID + "." + this.name.toLowerCase());
         setCreativeTab(GTMod.creativeTabGT);
     }
 

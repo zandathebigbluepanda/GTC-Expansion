@@ -625,7 +625,7 @@ public class GTCXTileCentrifuge extends GTTileBaseMachine implements ITankListen
 	}
 
 	static void addRecipe(List<IRecipeInput> input, MachineOutput output){
-		addRecipe(input, output, (output instanceof GTFluidMachineOutput ? ((GTFluidMachineOutput)output).getFluids().get(0).getUnlocalizedName() : output.getAllOutputs().get(0).getUnlocalizedName()));
+		addRecipe(input, output, (output instanceof GTFluidMachineOutput ? ((GTFluidMachineOutput)output).getFluids().get(0).getUnlocalizedName() : output.getAllOutputs().get(0).getTranslationKey()));
 	}
 
 	static void addRecipe(List<IRecipeInput> input, MachineOutput output, String recipeID) {
@@ -634,7 +634,7 @@ public class GTCXTileCentrifuge extends GTTileBaseMachine implements ITankListen
 				VALID_FLUIDS.add(((RecipeInputFluid)in).fluid.getFluid());
 			}
 		}
-		GTTileCentrifuge.RECIPE_LIST.addRecipe(input, output, (output instanceof GTFluidMachineOutput ? ((GTFluidMachineOutput)output).getFluids().get(0).getUnlocalizedName() : output.getAllOutputs().get(0).getUnlocalizedName()), EU_TICK);
+		GTTileCentrifuge.RECIPE_LIST.addRecipe(input, output, (output instanceof GTFluidMachineOutput ? ((GTFluidMachineOutput)output).getFluids().get(0).getUnlocalizedName() : output.getAllOutputs().get(0).getTranslationKey()), EU_TICK);
 	}
 
 	@Override

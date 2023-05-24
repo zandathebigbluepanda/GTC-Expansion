@@ -12,6 +12,7 @@ import ic2.core.platform.registry.Ic2GuiComp;
 import ic2.core.platform.registry.Ic2Resources;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.entity.player.EntityPlayer;
 
 public class GTCXContainerScanner extends ContainerTileComponent<GTCXTileScanner> {
 
@@ -38,5 +39,9 @@ public class GTCXContainerScanner extends ContainerTileComponent<GTCXTileScanner
     @Override
     public int guiInventorySize() {
         return 7;
+    }
+    @Override
+    public boolean canInteractWith(EntityPlayer player) {
+        return true;
     }
 }

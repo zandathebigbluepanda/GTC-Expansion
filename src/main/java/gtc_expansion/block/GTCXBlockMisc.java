@@ -39,7 +39,7 @@ public class GTCXBlockMisc extends GTBlockBase implements IGTBurnableBlock, ITil
         this.name = name;
         this.id = id;
         setRegistryName(this.name);
-        setUnlocalizedName(comp);
+        setTranslationKey(comp);
         setCreativeTab(GTMod.creativeTabGT);
         setHardness(hardness);
         setResistance(resistence);

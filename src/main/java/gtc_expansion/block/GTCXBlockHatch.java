@@ -85,7 +85,6 @@ public class GTCXBlockHatch  extends GTCXBlockTile implements ICustomModeledBloc
     }
 
     @SideOnly(Side.CLIENT)
-    @Override
     public BlockRenderLayer getBlockLayer() {
         return BlockRenderLayer.CUTOUT_MIPPED;
     }

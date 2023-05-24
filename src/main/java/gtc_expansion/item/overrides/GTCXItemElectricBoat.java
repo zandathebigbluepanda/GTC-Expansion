@@ -54,7 +54,7 @@ public class GTCXItemElectricBoat extends ItemIC2Boat {
         float f7 = f4 * f5;
         float f8 = f3 * f5;
         double d3 = 5.0D;
-        Vec3d vec3d1 = vec3d.addVector((double)f7 * d3, (double)f6 * d3, (double)f8 * d3);
+        Vec3d vec3d1 = vec3d.add((double)f7 * d3, (double)f6 * d3, (double)f8 * d3);
         RayTraceResult raytraceresult = worldIn.rayTraceBlocks(vec3d, vec3d1, true);
         if (raytraceresult == null) {
             return new ActionResult<>(EnumActionResult.PASS, stack);

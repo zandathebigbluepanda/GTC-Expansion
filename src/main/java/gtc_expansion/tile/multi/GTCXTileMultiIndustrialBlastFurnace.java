@@ -262,7 +262,7 @@ public class GTCXTileMultiIndustrialBlastFurnace extends GTTileMultiBaseMachine 
 	}
 
 	public static void addRecipe(IRecipeInput[] inputs, int heat, int totalEu, ItemStack... outputs) {
-		addRecipe(inputs, heat, totalEu, outputs[0].getUnlocalizedName(), outputs);
+		addRecipe(inputs, heat, totalEu, outputs[0].getTranslationKey(), outputs);
 	}
 
 	public static void addRecipe(IRecipeInput[] inputs, int heat, int totalEu, String recipeID, ItemStack... outputs) {

@@ -33,7 +33,7 @@ public class GTCXItemToolShovel extends ItemSpade
         super(tmat);
         this.material = mat;
         setRegistryName(this.material.getName() + "_shovel");
-        setUnlocalizedName(GTCExpansion.MODID + "." + this.material.getName() + "_shovel");
+        setTranslationKey(GTCExpansion.MODID + "." + this.material.getName() + "_shovel");
         setCreativeTab(GTMod.creativeTabGT);
     }
 

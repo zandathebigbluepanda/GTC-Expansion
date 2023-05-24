@@ -197,7 +197,7 @@ public class GTCXTileMicrowave extends GTTileBaseMachine {
     public static void addRecipe(IRecipeInput input1, ItemStack output) {
         List<IRecipeInput> inputs = new ArrayList<>();
         inputs.add(input1);
-        addRecipe(inputs, new MachineOutput(null, output), output.getUnlocalizedName());
+        addRecipe(inputs, new MachineOutput(null, output), output.getTranslationKey());
     }
 
     public static void addRecipe(IRecipeInput input1, ItemStack output, String recipeId) {

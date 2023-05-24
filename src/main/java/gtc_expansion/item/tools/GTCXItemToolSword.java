@@ -33,7 +33,7 @@ public class GTCXItemToolSword extends ItemSword
         super(tmat);
         this.material = mat;
         setRegistryName(this.material.getName() + "_sword");
-        setUnlocalizedName(GTCExpansion.MODID + "." + this.material.getName() + "_sword");
+        setTranslationKey(GTCExpansion.MODID + "." + this.material.getName() + "_sword");
         setCreativeTab(GTMod.creativeTabGT);
     }
 

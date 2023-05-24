@@ -37,7 +37,7 @@ public class GTCXItemInsulationCutter extends Item implements ICutterItem, IStat
         this.setMaxDamage(512);
         this.setNoRepair();
         this.setRegistryName(GTCExpansion.MODID, "cutter");
-        setUnlocalizedName(GTCExpansion.MODID + ".cutter");
+        setTranslationKey(GTCExpansion.MODID + ".cutter");
         setCreativeTab(GTMod.creativeTabGT);
     }
 

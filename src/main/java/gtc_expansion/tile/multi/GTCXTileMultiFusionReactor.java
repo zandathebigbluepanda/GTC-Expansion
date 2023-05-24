@@ -669,13 +669,13 @@ public class GTCXTileMultiFusionReactor extends GTTileMultiBaseMachine implement
     }
 
     public static void addRecipe(IRecipeInput input1, IRecipeInput input2, IRecipeModifier[] modifiers, int startEu, ItemStack output){
-        addRecipe(input1, input2, modifiers, startEu, output, output.getUnlocalizedName());
+        addRecipe(input1, input2, modifiers, startEu, output, output.getTranslationKey());
     }
 
     public static void addRecipe(IRecipeInput input1, IRecipeInput input2, IRecipeModifier[] modifiers, int startEu, ItemStack output, String recipeId){
         List<IRecipeInput> inlist = new ArrayList<>();
         if (startEu > 161000000){
-            GTCExpansion.logger.info("Recipe: " +  output.getUnlocalizedName() + " has too high of a start eu amount");
+            GTCExpansion.logger.info("Recipe: " +  output.getTranslationKey() + " has too high of a start eu amount");
             return;
         }
         inlist.add(input1);

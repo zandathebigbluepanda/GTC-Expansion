@@ -37,7 +37,7 @@ public class GTCXItemToolScrewdriver extends Item implements IStaticTexturedItem
         this.setMaxDamage(tmat.getMaxUses());
         this.setNoRepair();
         setRegistryName(this.material.getName() + "_screwdriver");
-        setUnlocalizedName(GTCExpansion.MODID + "." + this.material.getName() + "_screwdriver");
+        setTranslationKey(GTCExpansion.MODID + "." + this.material.getName() + "_screwdriver");
         setCreativeTab(GTMod.creativeTabGT);
     }
 

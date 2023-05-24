@@ -45,7 +45,7 @@ public class GTCXForgeHammerSupport {
                         + "Amount of time must be greater then 0!!");
                 return;
             }
-            GTCXTileSteamForgeHammer.addRecipe(input1, GTCXTileSteamForgeHammer.totalTime(totalTime), output, output.getUnlocalizedName() + "_ct");
+            GTCXTileSteamForgeHammer.addRecipe(input1, GTCXTileSteamForgeHammer.totalTime(totalTime), output, output.getTranslationKey() + "_ct");
         }
 
         @Override
