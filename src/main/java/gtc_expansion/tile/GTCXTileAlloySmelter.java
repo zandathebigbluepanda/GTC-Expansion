@@ -207,66 +207,12 @@ public class GTCXTileAlloySmelter extends GTTileBaseMachine {
         addRecipe(inputs, new MachineOutput(mods, output), recipeId);
     }
 
-
-
     static void addRecipe(List<IRecipeInput> input, MachineOutput output) {
         addRecipe(input, output, output.getAllOutputs().get(0).getTranslationKey());
     }
 
     static void addRecipe(List<IRecipeInput> input, MachineOutput output, String recipeId) {
         GTCXRecipeLists.ALLOY_SMELTER_RECIPE_LIST.addRecipe(input, output, recipeId, 16);
-    }
-
-    @Override
-    public void update() {
-        handleRedstone();
-        updateNeighbors();
-        boolean noRoom = addToInventory();
-        if (shouldCheckRecipe) {
-            lastRecipe = getRecipe();
-            shouldCheckRecipe = false;
-        }
-        boolean canWork = canWork() && !noRoom;
-        boolean operate = (canWork && lastRecipe != null && lastRecipe != GTRecipeMultiInputList.INVALID_RECIPE);
-        if (operate) {
-            handleChargeSlot(maxEnergy);
-        }
-        if (operate && canContinue() && energy >= energyConsume) {
-            if (!getActive()) {
-                getNetwork().initiateTileEntityEvent(this, 0, false);
-            }
-            setActive(true);
-            progress += progressPerTick;
-            useEnergy(recipeEnergy);
-            if (progress >= recipeOperation) {
-                process(lastRecipe);
-                progress = 0;
-                notifyNeighbors();
-            }
-            getNetwork().updateTileGuiField(this, "progress");
-        } else {
-            if (getActive()) {
-                if (progress != 0) {
-                    getNetwork().initiateTileEntityEvent(this, 1, false);
-                } else {
-                    getNetwork().initiateTileEntityEvent(this, 2, false);
-                }
-            }
-            if (progress != 0) {
-                progress = 0;
-                getNetwork().updateTileGuiField(this, "progress");
-            }
-            setActive(false);
-        }
-        if (supportsUpgrades) {
-            for (int i = 0; i < upgradeSlots; i++) {
-                ItemStack item = inventory.get(i + inventory.size() - upgradeSlots);
-                if (item.getItem() instanceof IMachineUpgradeItem) {
-                    ((IMachineUpgradeItem) item.getItem()).onTick(item, this);
-                }
-            }
-        }
-        updateComparators();
     }
 
 }
